@@ -96,7 +96,7 @@ body {
 
   header > * {
     padding: 0.2rem;
-    margin-right:1rem;
+    margin-right:5%;
   }
 
   img {
@@ -220,7 +220,7 @@ body {
     
     .menu > li {
       padding-top:10px;
-      margin: 0 1rem;
+      margin: 0 1rem 1rem;
       overflow: hidden;
     }
     
