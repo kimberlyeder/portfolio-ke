@@ -1,10 +1,35 @@
+@font-face {
+  font-family: ChivoMono_bold;
+  src: url(Chivo_Mono-2/static/ChivoMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: ChivoMono_regular;
+  src: url(Chivo_Mono-2/static/ChivoMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: ChivoMono_italic;
+  src: url(Chivo_Mono-2/static/ChivoMono-Italic.ttf);
+}
+
+@font-face {
+  font-family: ChivoMono_thin;
+  src: url(Chivo_Mono-2/static/ChivoMono-Thin.ttf);
+}
+
+@font-face {
+  font-family: ChivoMono_black;
+  src: url(Chivo_Mono-2/static/ChivoMono-Black.ttf);
+}
+
 body {
-    background-color: black;
+    background-color: #011a27;
     font-family: sans-serif;
-    color: #F2EFDA;
+    font: 112.5%/1.3 "ChivoMono_black", monospace;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 30%;
+    margin-top: 20%;
     margin-bottom: 10%;
   
     background-size: 100% 100%;
@@ -14,34 +39,44 @@ body {
   
   
   h1 {
-    color: #F2EFDA;
+    color: #F0810F;
+    font: 200%/1.3 "ChivoMono_regular", monospace;
     letter-spacing: 2px;
     text-align: center;
   }
   
   h2 {
-    color: #EFD9BC;
-    font: monospace;
+    color: #dca46c;
+    font: 112.5%/1.3 "ChivoMono_black", monospace;
     letter-spacing:2px;
+    font-weight: bold;
     text-align: center;
   }
   
   p {
-    font: monospace;
+    font: 112.5%/1.3 "ChivoMono_regular", monospace;
     font-size: 18px;
-    color: #EFD9BC;
-    text-align: center;
+    font: monospace;
+    text-align: justify;
+    text-align-last: none;
+    color:#f3c18f ;
     margin-right: 0;
   }
 
+  li{
+    font: 112.5%/1.3 "ChivoMono_italic", monospace;
+    font-size: 16px;
+    color:#f3c18f ;
+  }
+
   a{
-    color:#F2EFDA;
-    font: monospace;
+    color:#f3c18f;
+    font: 112.5%/1.3 "ChivoMono_regular", monospace;
     text-align: center;
   }
   
   a:hover{
-    color:#5b0721; 
+    color: #063852; 
   }
   
   header{
@@ -55,7 +90,13 @@ body {
     left: 0;
     position: fixed;
     column-gap: 1em;
+    background-color: #011a27;
     z-index: 0;
+  }
+
+  header > * {
+    padding: 0.2rem;
+    margin-right:1rem;
   }
 
   img {
@@ -66,15 +107,90 @@ body {
     height: auto;
   }
 
-  .frame {
-    width: auto;
-    height: auto;
-    border: 3px solid black;
-    background: #fdfbfb; 
-    margin: auto;
-    padding: 15px 25px;
+  figcaption {
+    font: 112.5%/1.3 "ChivoMono_thin", monospace;
+    font-size: 15px;
+    color: #dca46c;
+    text-align: center;
+    margin-bottom: 4em;
+    margin-top: 10px;
   }
-  
+
+  footer{
+    display: flex;
+    column-gap: 1em;
+    font-size: 12px;
+    margin-top: 240px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: auto;
+  }
+
+  .menu { 
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+  .menu > li {
+    padding-top:2px;
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+
+  .form {
+    color: #dca46c;
+  }
+
+  .Data > label > input {
+    margin-left: 6px;
+  }
+
+  .Formular{
+    width: 70%;
+  }
+
+  .Message {
+    width: 90%;
+  }
+
+  .home{
+    margin-left: 0;
+    background-image: url(/img/start.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .transparent{
+    background-color: transparent;
+  }
+
+  .details{
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .titles{
+    font-size: 200%;
+    color:#F0810F;
+    white-space: pre-wrap;
+  }
+
+  .pure-button {
+    text-align: center;
+    background-color: #356ce3;
+    border-top-left-radius:2em;
+    border-top-right-radius:2em;
+    border-bottom-left-radius:2em;
+    border-bottom-right-radius:2em;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-left: 0;
+  }
+
 @media screen and (min-width: 50em){
   
     header{
@@ -93,7 +209,7 @@ body {
     body{
       margin-left: 10%;
       margin-right: 10%;
-      margin-top: 30%;
+      margin-top: 10%;
       margin-bottom: 10%;
     }
   
@@ -107,9 +223,24 @@ body {
       margin: 0 1rem;
       overflow: hidden;
     }
+    
+    .Grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      grid-gap: 5em;
+      align-items: center;
+    }
   
     img {
       width:50%;
       margin:auto;
+    }
+
+    .Message{
+      width: 95%;
+    }
+
+    .Project{
+      width: 100%;
     }
   }
