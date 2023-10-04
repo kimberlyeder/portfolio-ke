@@ -1,0 +1,18 @@
+{{#if user}}
+    <h1>Hello {{ user.username }}</h1>
+{{else}}
+    <h1>Hello guest</h1>
+
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+{{/if}}
+
+<a href="/secret">Secret page</a>
+
+<form action="/process" method="POST">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    
+    Favorite color: <input type="text" name="favoriteColor">
+    <button type="submit">Submit</button>
+</form>
+
