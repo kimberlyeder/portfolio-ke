@@ -1,0 +1,333 @@
+@font-face {
+  font-family: ChivoMono_bold;
+  src: url(Chivo_Mono-2/static/ChivoMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: ChivoMono_regular;
+  src: url(Chivo_Mono-2/static/ChivoMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: ChivoMono_italic;
+  src: url(Chivo_Mono-2/static/ChivoMono-Italic.ttf);
+}
+
+@font-face {
+  font-family: ChivoMono_thin;
+  src: url(Chivo_Mono-2/static/ChivoMono-Thin.ttf);
+}
+
+@font-face {
+  font-family: ChivoMono_black;
+  src: url(Chivo_Mono-2/static/ChivoMono-Black.ttf);
+}
+
+body {
+    background-color: #011a27;
+    font-family: sans-serif;
+    font: 112.5%/1.3 "ChivoMono_black", monospace;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30%;
+    margin-bottom: 10%;
+  
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  h1 {
+    display: flex;
+    flex-direction:column;
+    color: #F0810F;
+    font: 200%/1.3 "ChivoMono_regular", monospace;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  h2 {
+    display: flex;
+    flex-direction: column;
+    color: #dca46c;
+    font: 112.5%/1.3 "ChivoMono_black", monospace;
+    letter-spacing:2px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  p {
+    display: flex;
+    flex-direction: column;
+    font: 112.5%/1.3 "ChivoMono_regular", monospace;
+    font-size: 18px;
+    font: monospace;
+    text-align: justify;
+    text-align-last: none;
+    color:#f3c18f ;
+    margin-right: 0;
+  }
+
+  li{
+    display: flex;
+    flex-direction: column;
+    font: monospace;
+    font: 112.5%/1.3 "ChivoMono_italic", monospace;
+    font-size: 16px;
+    color:#f3c18f ;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a{
+    display: flex;
+    flex-direction: column;
+    color:#f3c18f;
+    font: 112.5%/1.3 "ChivoMono_regular", monospace;
+    text-align: center;
+  }
+  
+  a:hover{
+    color: #063852; 
+  }
+  
+  header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:auto;
+    height: 110px;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px 20px;
+    position: fixed;
+    column-gap: 2em;
+    background-color: #011a27;
+  }
+
+  header > * {
+    padding: 0.2rem;
+    margin-right:5%;
+  }
+
+  img {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    font: 112.5%/1.3 "ChivoMono_thin", monospace;
+    font-size: 15px;
+    color: #dca46c;
+    text-align: center;
+    margin-bottom: 4em;
+    margin-top: 10px;
+  }
+
+  footer{
+    display: flex;
+    column-gap: 1em;
+    font-size: 12px;
+    margin-top: 240px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: auto;
+  }
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+  }
+
+  /* Style for the burger menu */
+  .burger-menu {
+    display: none; /* Initially hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+  }
+
+    /* Style for the right-side menu */
+
+  .right-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .right-menu ul li {
+    padding: 10px 20px;
+  }
+
+  .right-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .form {
+    color: #dca46c;
+  }
+
+  .Data > label > input {
+    margin-left: 6px;
+  }
+
+  .Formular{
+    width: 70%;
+  }
+
+  .Message {
+    width: 90%;
+  }
+
+  .home{
+    margin-left: 0;
+    background-image: url(/public/img/start.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .transparent{
+    background-color: transparent;
+  }
+
+  .details{
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .titles{
+    font-size: 200%;
+    color:#F0810F;
+    white-space: pre-wrap;
+  }
+
+  .pure-button {
+    text-align: center;
+    background-color: #063852;
+    border-top-left-radius:2em;
+    border-top-right-radius:2em;
+    border-bottom-left-radius:2em;
+    border-bottom-right-radius:2em;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-left: 0;
+  }
+
+  .overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#011a27; 
+    z-index: 2; /* Place it above the right menu */
+  }
+  
+  .overlay.show {
+    display: block; /* Show overlay when the show class is applied */
+   }
+   
+
+/* Media query to show the overlay on smaller screens */
+@media (max-width: 768px) {
+  .burger-menu {
+      display: flex;
+  }
+
+  .right-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #011a27;
+      z-index: 1;
+  }
+
+  .right-menu.show {
+      display: block;
+  }
+
+  .overlay.show {
+      display: block; /* Show overlay when the show class is applied */
+      position: fixed; 
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #011a27; 
+      z-index: 1000; 
+ 
+    }
+}
+
+/* CSS for smaller screens */
+@media screen and (min-width: 50em){
+  
+    header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width:auto;
+      height: 110px;
+      top: 0;
+      right: 0;
+      left: 0;
+      position: fixed;
+      column-gap: 2em;
+    }
+  
+    body{
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+
+    img {
+      display: flex;
+      flex-direction: row;
+      width:50%;
+      margin:auto;
+    }
+    
+    .Grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      grid-gap: 5em;
+      align-items: center;
+    }
+
+    .Message{
+      width: 95%;
+    }
+
+    .Project{
+      width: 100%;
+    }
+  }
