@@ -30,26 +30,48 @@
     </header>
     <h1>Projects</h1>
     <div class="Grid">
-        <figure class="Project">
-            <img src="/public/img/sweden.png" alt="Exchange in Sweden"
-            width=100 height=100>
-            <figcaption>Exchange in Sweden</figcaption>
-        </figure>
-        <figure class="Project">
-            <img src="/public/img/little one.png" alt="Film Little One"
-            width=100 height=100>
-            <figcaption>Exchange in Sweden</figcaption>
-        </figure>
-        <figure class="Project">
-            <img src="/public/img/Schlafwandler 2.png" alt="Schlafwandler 2"
-            width=100 height=100>
-            <figcaption>Schlafwandler</figcaption>
-        </figure>
-        <figure class="Project">
-            <img src="/public/img//Schlafwandler.png" alt="Schlafwandler"
-            width=100 height=100>
-            <figcaption>Schlafwandler</figcaption>
-        </figure>
+        {{#if isAdmin}}
+            <div>
+                <a href="/projects/new.handlebars" class="btn btn-link"> New project </a>
+            </div>
+        {{/if}}
+        {{#if dbError}}
+            <div>
+                Sorry, there was a problem with the database:<br />
+                {{theError}}
+            </div>
+        {{/if}}
+        {{else}}
+            {{#each projects}}
+                <figure class="Project">
+                    <img src="/public/img/sweden.png" alt="Exchange in Sweden"
+                    width=100 height=100>
+                    <figcaption>Exchange in Sweden</figcaption>
+                </figure>
+                <figure class="Project">
+                    <img src="/public/img/little one.png" alt="Film Little One"
+                    width=100 height=100>
+                    <figcaption>Exchange in Sweden</figcaption>
+                </figure>
+                <figure class="Project">
+                    <img src="/public/img/Schlafwandler 2.png" alt="Schlafwandler 2"
+                    width=100 height=100>
+                    <figcaption>Schlafwandler</figcaption>
+                </figure>
+                <figure class="Project">
+                    <img src="/public/img//Schlafwandler.png" alt="Schlafwandler"
+                    width=100 height=100>
+                    <figcaption>Schlafwandler</figcaption>
+                </figure>
+                <div class="card-footer">
+                    {{#if ../isAdmin}}
+                    <div>
+                        <a href="/projects/update/{{pid}}">Modify </a> - <a href="/projects/delete/{{pid}}" class="important"> Delete</a>
+                    </div>
+                    {{/if}}
+                </div>
+            {{/each}}
+        {{/if}}
     </div>
     <p>All videos can be found in the original at vimeo.com</p>
     <p><a class= "pure-button" href="https://vimeo.com/kimberlyeder">Vimeo</a></p>

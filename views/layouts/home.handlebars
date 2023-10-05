@@ -23,11 +23,19 @@
                     <li><a href="about.handlebars">About</a></li>
                     <li><a href="projects.handlebars">Projects</a></li>
                     <li><a href="contact.handlebars">Contact</a></li>
+                    <li><a href="login.handlebars">Log In</a></li>
                 </ul>
             </nav>
         </div>
         <script src="script.js"></script>
     </header>
+    {{#if isLoggedIn}}
+        <div class="to-the-right">
+            Hi, {{name}}! &nbsp; &nbsp;
+            <a href="/logout" class="btn btn-link">Logout</a>
+        </div>
+    {{else}}
+        <a href="/login" class="btn btn-link to-the-right">Log In</a>
+    {{/if}}
     <p class="titles">Filmmaker<br />Editor<br />Artist</p>  
-    
 </body>

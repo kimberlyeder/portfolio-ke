@@ -1,5 +1,19 @@
-<form action="/login" method="POST">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Login">
-</form>
+<div id="main">
+    <div>
+        <h1>Log in</h1>
+        </div>
+
+            <form action="/login" method="POST">
+                <fieldset>
+                    <label for"un">Username: </label>
+                    <input type="text" name="un" placeholder="Username" required="required">
+                    <br />
+                    <labelfor="pw">Password: </label>
+                    <input type="password" name="pw" id="pw" placeholder="Password" required="required">
+                    <br />
+                </fieldset>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</div>
