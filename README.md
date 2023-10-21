@@ -1,2 +1,2 @@
 # portfolio-ke
-My portfolio for the Web Dev Fun course!
+My first draft of the portfolio for the Web Dev Fun course!
